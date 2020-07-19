@@ -26,10 +26,12 @@ print("Line 4\nLine 5\nLine 6")
 # In what is probably not a surprise to you, computers can do math
 
 # They can also store the results of mathematical operations in a variable
-
 x = 1 + 2
 print("The next line will print the results of 1 + 2:")
 print(x)
+
+# Side note: In a lot of examples I'm using single-character variable names. You should probably
+# not do that in any real code.
 
 # What may be a surprise to you is that you don't need to declare the type of variable
 
@@ -75,9 +77,13 @@ print(d) # 2.25
 # Why not just write 
 # c = c * 2
 
+# Here is how you do exponents
+e = 2**3 
+print(e) # 8
+
 # And here is good-ole modulo, which always makes me feel like a CS whiz whenever I have occassion to use:
-e = 55 % 10
-print(e) # 5
+m = 55 % 10
+print(m) # 5
 
 # A couple of notes on the above:
 # We reused the variable c and switched it from being a `str` (string) to an `int` (integer).
@@ -86,6 +92,32 @@ print(e) # 5
 # You can also use variables on the right hand side of the equation
 d = a * b - c
 print(d) # 4916
+
+# Generally in Python, if you create a variable based on another variable, then modify one of them, 
+# the other is unchanged
+a = 2
+b = a
+b = b - 3
+print(a) # 2
+print(b) # -1
+
+# I say "Generally" because for dictionaries and lists (which we will come to later) this is not the case
+
+a = [0,2,3]
+b = a
+b.append(99)
+print(a) # [0, 2, 3, 99]
+print(b) # [0, 2, 3, 99]
+
+a = {
+    "one": 1,
+    "two": 2
+}
+b = a
+b["three"] = 3
+print(a) # {'one': 1, 'two': 2, 'three': 3}
+print(b) # {'one': 1, 'two': 2, 'three': 3}
+
 
 # This isn't really a tradition, but it seems like it should be:
 print("Goodbye world!")
