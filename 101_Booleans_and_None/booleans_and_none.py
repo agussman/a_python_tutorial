@@ -69,3 +69,12 @@ print( not (a < b) and (b < c) ) # False
 # Order of operations is not, and, or
 print( not (a < b) and (c < a) ) # False
 print( not ((a < b) and (c < a)) ) # True
+
+# Python also has a None keyword to indicate a null or empty value
+# We'll show you why this is useful later, but for now:
+print(None) # None
+print(None == True) # False
+print(None == False) # False!
+print(0 == None) # False!!!
+n = None
+print(n == None) # True
