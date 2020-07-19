@@ -11,4 +11,4 @@ Then run the script to see the output.
 $ python basic_python.py
 ```
 
-Then look at the content of script againt to make sure you understand what it did.
+Then look at the content of script again to make sure you understand what it did.
