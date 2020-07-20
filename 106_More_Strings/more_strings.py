@@ -116,7 +116,7 @@ name = "Fortunato"
 print("Welcome to my wine cellar, {}".format(name))
 
 wine = "Médoc"
-location = "veranda"
+location = "vestibule"
 print("Let us try the {}, it is in the {}.".format(wine, location))
 
 # If you know you'll be running your code in Python 3.6 or later
@@ -124,6 +124,8 @@ print("Let us try the {}, it is in the {}.".format(wine, location))
 wine = "Amontillado"
 location = "catacombs"
 print(f"Let us try the {wine}, it is in the {location}.")
+
+# f strings are pretty cool, and if you use them, then you are pretty cool, too
 
 # There are many options with format()
 
