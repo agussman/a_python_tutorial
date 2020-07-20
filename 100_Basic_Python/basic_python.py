@@ -57,6 +57,15 @@ print(b) # 77
 print(c) # 2178
 print(d) # 4.5
 
+# A couple of notes on the above:
+# We reused the variable c and switched it from being a `str` (string) to an `int` (integer).
+# If you got '4' instead of '4.5' for d, you are almost certainly running Python 2.
+
+# Division in Python 3 always returns a float:
+print(4 / 2) # 2.0
+# If you want Python 2 style division aka "floor division" use //
+print(4 // 2) # 2
+
 # Here are some other operations it is sometimes useful to use
 a += 1
 b -= 1
@@ -85,9 +94,7 @@ print(e) # 8
 m = 55 % 10
 print(m) # 5
 
-# A couple of notes on the above:
-# We reused the variable c and switched it from being a `str` (string) to an `int` (integer).
-# If you got '4' instead of '4.5' for d, you are almost certainly running Python 2.
+
 
 # You can also use variables on the right hand side of the equation
 d = a * b - c
