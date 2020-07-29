@@ -104,3 +104,85 @@ print(fruit_colors) # {'apple': 'red', 'banana': 'yellow', 'cherry': 'red', 'dur
 # This is also the same syntax for updating the value of an existing key
 fruit_colors["banana"] = "brown"
 print(fruit_colors) # {'apple': 'red', 'banana': 'brown', 'cherry': 'red', 'durian': 'spikey?', 'emblic': 'green', 'fig': 'purple'}
+
+
+# TODO: Rules of thumb for when to use a list vs a dictionary
+
+# The items in a list can be other lists or dictionaries:
+
+list_of_lists = [
+    [1,2,3],
+    [4,5,6],
+    ["seven", "eight", "nine", True]
+]
+
+print(list_of_lists)
+
+list_of_dicts = [
+    {
+        "isbn": "0441172717",
+        "title": "Dune",
+        "author": "Frank Herbert"
+    },
+    {
+        "isbn": "9780007270422",
+        "title": "Foundation",
+        "author": "Isaac Asimov",
+        "read": True
+    }
+]
+print(list_of_dicts)
+
+# The values in a dict can be lists or dicts as well:
+
+dict_of_lists = {
+    "attendees": ["Jill", "Joanie", "Jessica"],
+    "notes": [
+        "A toaster oven in a broad striped suit.",
+        "Eleven total trumpets swollen with malevolence.",
+        "If only an even handed man would offer up the time.",
+        "It is ever always the way of rainbows and rivers to move in a deterministic fashion."
+    ]
+}
+print(dict_of_lists)
+
+dict_of_dicts = {
+    "divinations": 
+        {
+            "hydropmancy": "water",
+            "geomancy": "earth",
+            "anthropomancy": "entrails"
+        },
+    "omics":
+        {
+            "genomics": "genomes",
+            "proteomics": "proteins"
+        },
+    "temperature":
+        {
+            "2020-05-01": 85,
+            "2020-05-02": 77,
+            "2020-05-03": 80
+        }
+}
+
+print(dict_of_dicts)
+
+# Crucially, you cannot use dicts os lists as the KEY of a dictionary
+'''
+fail_dict_key = {
+    {key: value}: False
+}
+
+fail_list_key = {
+    [0,1]: False
+}
+'''
+
+# If you absolutely must use a compound data type as a dict key, you can use something called a tuple 
+# We're ignoring tuples for now because I don't think they're all that important
+dict_with_tuples = {
+    (0,1): "<-- that's an example of a tuple being used as a key",
+    ("a", "b", "c"): "<-- here's another tuple being used as a key"
+}
+print(dict_with_tuples)
