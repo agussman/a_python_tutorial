@@ -186,3 +186,54 @@ dict_with_tuples = {
     ("a", "b", "c"): "<-- here's another tuple being used as a key"
 }
 print(dict_with_tuples)
+
+
+# An important thing you will often need to do is check if an item is in a list
+# we use "if" and "in" to check this
+
+weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+if "Monday" in weekdays:
+    print("Monday is a weekday") # This will be printed
+else:
+    print("Monday is not a weekday")
+
+if "Saturday" in weekdays:
+    print("Saturday is a weekday")
+else:
+    print("Saturday is not a weekday") # This will be printed
+
+# To check if it's not in there, use... "not"
+if "Slurmsday" not in weekdays:
+    print("Yeah, Slurmsday isn't a thing.") # This will print
+
+
+# Use the same if/in syntax to check if a dict has a specific key
+if "apple" in fruit_colors:
+    print("apple is a key in fruit_colors") # prints
+else:
+    print("apple is not a key in fruit_colors")
+
+if "gooseberry" in fruit_colors:
+    print("gooseberry is a key in fruit_colors")
+else:
+    print("gooseberry is not a key in fruit_colors") # prints
+
+if "red" not in fruit_colors:
+    print("red is not a KEY in fruit_colors") # prints
+
+# To check if a dict contains a particular value, we use dict.values()
+# dict.values() is actually returning a list, which is kind of ironic if you think about it
+if "red" in fruit_colors.values():
+    print("red is a VALUE in fruit_colors") # prints
+
+# This, of course, begats the question, "How do I know what key has the given value?" to which I say,
+# Snarky answer: You're probably doing something wrong if you're trying to do this.
+# Less snarky answer: It involves Loops, so hang tight until the Loops lesson.
+
+# One last thing that does come up a lot is that you'll want to check if a key is in a dict
+# and return the value if the key is present, otherwise return some other value
+# You can do this with dict.get(key, default_value)
+
+# print(fruit_colors["gooseberry"]) # Throws a KeyError
+
+print(fruit_colors.get("gooseberry", "translucent")) # translucent
