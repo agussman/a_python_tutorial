@@ -1,6 +1,6 @@
 # Welcome to Python!
 
-# Lines starting with # (pounnd/number sign/octothorpe) are comments and don't "do" anything
+# Lines starting with # (pound/number sign/octothorpe) are comments and don't "do" anything
 
 ''' Three apostrophes can also start and end a comment '''
 
@@ -20,8 +20,11 @@ print("Line 1")
 print("Line 2")
 print("line 3")
 
-# You can roll your own linebreaks with \n
+# You can directly insert your own linebreaks with \n
 print("Line 4\nLine 5\nLine 6")
+
+# You can directly insert your own tabs with \t
+print("Hey you!\n\tLook over here!")
 
 # In what is probably not a surprise to you, computers can do math
 
@@ -58,8 +61,38 @@ print(c) # 2178
 print(d) # 4.5
 
 # A couple of notes on the above:
-# We reused the variable c and switched it from being a `str` (string) to an `int` (integer).
-# If you got '4' instead of '4.5' for d, you are almost certainly running Python 2.
+# -- We initially assigned a string ('str') value to c (e.g., "Dawg."). Later, we assigned it an `int` (integer) value (e.g., 2178).
+# -- If you got '4' instead of '4.5' for d, you are almost certainly running Python 2.
+
+# You may find yourself needing to convert between different types of variables
+# Let's create some sample variables:
+a_string = "1"
+an_integer = 1
+a_float = 1.0
+
+# You can check their type with the `type()` build-in function:
+print(type(a_string)) # <class 'str'>
+print(type(an_integer)) # <class 'int'>
+print(type(a_float)) # <class 'float'>
+
+# To convert from one data type to another, use the built-in functions `str()`, `int()`, and `float()`
+# (This is also called "casting" a variable)
+string_to_int = int(a_string)
+string_to_float = float(a_string)
+float_to_string = str(a_float)
+
+print(string_to_int) # 1
+print(string_to_float) # 1.0
+print(float_to_string) # 1.0
+
+print(type(string_to_int)) # <class 'int'>
+print(type(string_to_float)) # <class 'float'>
+print(type(float_to_string)) # <class 'str'>
+
+# Note that (for obvious reasons?) the string actually has to be a number; these don't work:
+# print(int("Zero"))
+# print(float("Words"))
+
 
 # Division in Python 3 always returns a float:
 print(4 / 2) # 2.0
@@ -108,8 +141,7 @@ b = b - 3
 print(a) # 2
 print(b) # -1
 
-# I say "Generally" because for dictionaries and lists (which we will come to later) this is not the case
-
+# I say "Generally" because for dictionaries and lists (which we will come to later) this is not the case:
 a = [0,2,3]
 b = a
 b.append(99)
