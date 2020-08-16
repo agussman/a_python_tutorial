@@ -227,7 +227,7 @@ if "red" in fruit_colors.values():
     print("red is a VALUE in fruit_colors") # prints
 
 # This, of course, begats the question, "How do I know what key has the given value?" to which I say,
-# Snarky answer: You're probably doing something wrong if you're trying to do this.
+# Snarky answer: You're probably doing something wrong if you're trying to do this. Rethink your data structures.
 # Less snarky answer: It involves Loops, so hang tight until the Loops lesson.
 
 # One last thing that does come up a lot is that you'll want to check if a key is in a dict
