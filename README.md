@@ -11,6 +11,8 @@ It is not designed to teach you to be a software developer, to instill good soft
  * a code editor
  * git
 
+You can use [Binder](https://mybinder.org/) to view/edit the code and execute it in a terminal. Get started here: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/agussman/a_python_tutorial/master).
+
 # Instructions
 
  Each directory is a lesson. They will build upon each other conceptually but still run independently. 
