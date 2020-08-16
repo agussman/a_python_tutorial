@@ -66,7 +66,7 @@ car = ["wheels", "engine", "gas"]
 racecar = race + car
 print(racecar) # [3, 2, 1, 'wheels', 'engine', 'gas']
 
-# This is not a thing
+# This is not a thing:
 # racecar - car
 
 

@@ -17,7 +17,7 @@ print(4 >= 3) # True
 print(4 <= 3) # False
 
 # All of the above also work with variables
-a = 3
+a = 3 # Note: a single = is for assignment
 b = 4
 print( a == a ) # True
 print( b < a )  # False
@@ -66,7 +66,7 @@ print( (a < b) and not (b < c) ) # False
 print( (a < b) and not (c < a) ) # True
 print( not (a < b) and (b < c) ) # False
 
-# Order of operations is not, and, or
+# Order of operations is `not`, `and`, `or`
 print( not (a < b) and (c < a) ) # False
 print( not ((a < b) and (c < a)) ) # True
 

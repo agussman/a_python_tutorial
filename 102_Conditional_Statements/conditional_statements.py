@@ -9,19 +9,19 @@ print("Ni!")
 
 # A couple of things here:
 
-# * if is followed by a boolean expresison that evaluates to True or False
+# * `if` is followed by a boolean expresison that evaluates to True or False
 # 
 # * Python doesn't use { and } for scoping, it uses indentation.
 #   Your editor should just interpret a tab press as 4 spaces. If it doesn't, you should see if that's 
 #   a setting you can change, or get a new editor.
 #
-# * Note the : at the end of the line starting with if. It is important.
+# * Note the `: at the end of the line starting with `if`. It is important.
 #
-# * Parenthesis around the conditional statement aren't requireed, but don't hurt anything either
+# * Parenthesis around the conditional statement aren't required, but don't hurt anything either
 if (witch_weight > duck_weight):
     print("The witch still weighs more than the duck.")
 
-# if can accept any conditional expression:
+# `if` can accept any conditional expression:
 a = 3
 b = 4
 c = 5

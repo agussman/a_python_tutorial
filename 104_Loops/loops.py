@@ -8,7 +8,7 @@ while ( i < 3):
     print(i)
     i += 1
 
-# A `for` loop executes for each item in a list (or, technically, an "iterator")
+# A `for` loop executes for each item in a list (or, more broadly, it will execute for each object in an "iterator")
 bagel_flavors = ["seasme", "raisin", "everything"]
 for flavor in bagel_flavors:
     print(flavor)
@@ -18,30 +18,30 @@ for flavor in bagel_flavors:
 # the range function returns a list of integers (inclusive of start, exclusive of end)
 
 
-# Using range is how we can get the functionality of the traditional for loop
+# Using range is how we can get the functionality of the traditional `for` loop
 for i in range(0, 3):
     print(i*i) # 0, 1, 4
 
 # We can provide an optional increment value
-even_numbers = range(0,10, 2)
+even_numbers = range(0, 10, 2)
 # print(even_numbers) # because this is an iterator, it doesn't print what you'd think!
 for i in even_numbers:
     print(i) # 0, 2, 4, ... 8
 
 
-# For loops can be nested
+# `for` loops can be nested
 for x in [1, 2, 3]:
     for y in [9,10,11]:
         print(x*y) # 10, 11, 18, 20, 22, 27, 30, 33
 
 
-# for loops can be combined with conditional based flow control
+# `for` loops can be combined with conditional based flow control
 for x in range(0,25):
     if (x % 5 == 0):
         print(x) # 0, 5, 10, 15, 20
 
 
-# A coomon task is to iterate over a list and use both the index and the value
+# A common task is to iterate over a list and use both the index and the value
 # You can use `enumerate()` for this
 
 for rank, flavor in enumerate(bagel_flavors):
@@ -74,9 +74,8 @@ for key, value in a.items():
     print(key)
     print(value)
 
-# As foreshadowed in the Lists and Dictioanries lesson, this is how you can check 
+# As foreshadowed in the Lists and Dictionaries lesson, this is how you can check 
 # if a dict contains a particular value and get the associated key
-
 search_value = "foo"
 for key, value in a.items():
     if value == search_value:
