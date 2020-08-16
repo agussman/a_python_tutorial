@@ -1,6 +1,9 @@
 # Here are some things about strings in Python
 # This lesson isn't strictly crucial, but it is useful
 
+# As a reminder, you can use \n for linebreaks and \t for tabs:
+print("Hey you!\n\tLook over here!")
+
 # You can use single or double quotes to enclose strings in Python, it doesn't matter
 print("This is a string.\nHere is the next line.")
 print('This is a string.\nHere is the next line.')
