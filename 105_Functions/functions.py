@@ -104,7 +104,119 @@ def nth_fibonacci(n):
 
 print(nth_fibonacci(9)) # 21
 
+# TODO: scoping
 
+# Variable scoping and passing variables to functions is a fairly complex subject. 
+
+# Python isn't strictly "pass by reference" or "pass by value", it's "pass by assignment"
+# (if the above doens't mean anything to you, that's fine)
+
+# https://realpython.com/python-scope-legb-rule/ has more info
+
+# Here we'll go over some practical situations you're likely to encounter.
+
+# Basic types aren't modified in a function
+def add_one(n):
+    n = n + 1
+
+x = 10
+add_one(x)
+print(x) # 10
+
+# If you want the function to modify your input, return the value
+def add_one_and_return(n):
+    return n + 1
+
+x = 20
+x = add_one_and_return(x)
+print(x) # 21
+
+
+# Variables declared "outside" of a function scope are available inside the function
+my_global_var = 7
+def add_my_global_var(n):
+    return n + my_global_var
+
+x = 30
+x = add_my_global_var(x)
+print(x) # 37
+
+# But, weirdly, this won't work:
+def modify_and_add_my_global_var(n):
+    # Throws "UnboundLocalError: local variable 'my_global_var' referenced before assignment"
+    my_global_var = my_global_var + 1 # you can't do this
+    return n + my_global_var
+
+#x = 40
+#x = modify_and_add_my_global_var(x)
+#print(x)
+
+# To modify the global variable, you need to specify global
+# (note: this is not really recommended)
+def global_modify_and_add_my_global_var(n):
+    global my_global_var
+    my_global_var = my_global_var + 1
+    return n + my_global_var
+
+my_global_var = 3
+x = 50
+x = global_modify_and_add_my_global_var(x)
+print(my_global_var) # 4
+print(x) # 54
+
+# Here's a better way to do it, without relying on globals, assuming you actually want to modify two variables
+def modify_two_variables(n, i):
+    i = i + 1
+    n = n + i
+    return n, i
+
+# Functions can return multiple values!
+x = 60
+y = 5
+x, y = modify_two_variables(x,y)
+print(x) # 66
+print(y) # 6
+
+
+# Note that all of the above applies to `int`, `float`, and `str`
+# dicts and lists 
+
+def modify_a_list(l):
+    l.append(99)
+
+my_list = [1,2,3]
+modify_a_list(my_list)
+print(my_list) # [1, 2, 3, 99]
+
+def modify_a_dict(d):
+    d["new"] = 99
+
+my_dict = {"one": 1, "two": 2}
+modify_a_dict(my_dict)
+print(my_dict) # {'one': 1, 'two': 2, 'new': 99}
+
+# Python 3.5 introduced "type hints"
+# While they're optional and not super common, they look pretty wild I wanted to introduce them so you're not thrown if 
+# you encounter one in the wild
+
+def normal_function(score, name):
+    if (score >= 10):
+        print("Congratulations " + name)
+        return True
+    else:
+        return False
+
+# would become
+def typehint_function(score: int, name: str) -> bool:
+    if (score >= 10):
+        print("Congratulations " + name)
+        return True
+    else:
+        return False
+
+# Function annotations are added in the form `param_name : type` after each parameter in your function signature 
+# and a return type is specified using the `-> type` notation before the ending function colon
+# More: https://stackoverflow.com/a/32558710
 
 # Python supports something called "function decorators".
 # Their use and function is outside the scope of this tutorial, but I bring them up so you don't freak out
