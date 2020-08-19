@@ -3,6 +3,7 @@
 
 '''convert csv input (file or stdin) to tab-delimited text (stdout)'''
 
+import sys
 import csv
 import fileinput
 
@@ -10,16 +11,18 @@ import fileinput
 csv.field_size_limit(1000000000)
 
 # GLOBAL VARIABLES
-DELIMITER = ','
+INPUT_DELIMITER = ','
+OUTPUT_DELIMITER = '\t'
 QUOTECHAR = '"'
 
 def main():
-     #for line in fileinput.input():
-     csvreader = csv.reader(fileinput.input(), delimiter=DELIMITER, quotechar=QUOTECHAR)
+     csvreader = csv.reader(fileinput.input(), delimiter=INPUT_DELIMITER, quotechar=QUOTECHAR)
+     csvwriter = csv.writer(sys.stdout, delimiter=OUTPUT_DELIMITER, quotechar=QUOTECHAR)
      for row in csvreader:
-          print('\t'.join(row))
-          #print '\t'.join(row[0:3])
-          #print '\t'.join(row[j] for j in (0,2))
+          # Clean up leading and trailing whitespace
+          row = [x.strip() for x in row]
+
+          csvwriter.writerow(row)
 
 if __name__ == '__main__':
     main()
