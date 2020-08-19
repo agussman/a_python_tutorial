@@ -1,7 +1,7 @@
 #!/usr/bin/env python3 
 # -*- coding: utf-8 -*- 
 
-'''convert csv input (file or stdin) to tab-delimited text (stdout)'''
+'''convert csv input (hardcoded file) to tab-delimited text (stdout)'''
 
 import sys
 import csv
@@ -11,18 +11,21 @@ import fileinput
 csv.field_size_limit(1000000000)
 
 # GLOBAL VARIABLES
+INPUT_FILE = "data/ND_airport_runways.csv"
 INPUT_DELIMITER = ','
 OUTPUT_DELIMITER = '\t'
 QUOTECHAR = '"'
 
 def main():
-     csvreader = csv.reader(fileinput.input(), delimiter=INPUT_DELIMITER, quotechar=QUOTECHAR)
-     csvwriter = csv.writer(sys.stdout, delimiter=OUTPUT_DELIMITER, quotechar=QUOTECHAR)
-     for row in csvreader:
-          # Clean up leading and trailing whitespace
-          row = [x.strip() for x in row]
 
-          csvwriter.writerow(row)
+     with open(INPUT_FILE, 'r') as csvfile:
+          csvreader = csv.reader(csvfile, delimiter=INPUT_DELIMITER, quotechar=QUOTECHAR)
+          csvwriter = csv.writer(sys.stdout, delimiter=OUTPUT_DELIMITER, quotechar=QUOTECHAR)
+          for row in csvreader:
+               # Clean up leading and trailing whitespace
+               row = [x.strip() for x in row]
+
+               csvwriter.writerow(row)
 
 if __name__ == '__main__':
     main()
