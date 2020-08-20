@@ -5,7 +5,6 @@
 
 import sys
 import csv
-import fileinput
 
 # GLOBAL SETTINGS
 csv.field_size_limit(1000000000)
