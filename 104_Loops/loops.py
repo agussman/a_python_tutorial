@@ -13,21 +13,31 @@ bagel_flavors = ["seasme", "raisin", "everything"]
 for flavor in bagel_flavors:
     print(flavor)
 
-# If a function returns a list or iterable object, you can loop over that
+# If a function returns a list or iterable object, you can loop over it.
 
-# the range function returns a list of integers (inclusive of start, exclusive of end)
+# In Python, the `range()` function is used to generate a sequence of integers. 
+# There are multiple ways you can call `range()`. If you call it with two integers (start, stop)
+# it will generate a sequence of integers between those numbers (inclusive of the start, exclusive of the stop)
 
-
-# Using range is how we can get the functionality of the traditional `for` loop
-for i in range(0, 3):
+# We can use `range()` to execute code a particular number of times (similar to the functionality of the traditional `for` loop):
+# The code will be executed 3 times, with `i` having the values 0, 1, and 2 respectively.
+for i in range(0, 3): 
     print(i*i) # 0, 1, 4
 
-# We can provide an optional increment value
+# We can also call `range()` with a start, end, and optional step value
 even_numbers = range(0, 10, 2)
-# print(even_numbers) # because this is an iterator, it doesn't print what you'd think!
 for i in even_numbers:
     print(i) # 0, 2, 4, ... 8
 
+# A brief technical tangent:
+# Technically, `range()` does not return a `list`, it returns a related type of object called a `range`
+print(even_numbers) # range(0, 10, 2)
+print(type(even_numbers)) # <class 'range'>
+
+# `list` and `range` are part of a broad class of objects in Python known as `iterables`. There are lots of useful 
+# things you can do with iterables, but for now it's probably sufficient to think of them as "stuff that you can plug into a for loop"
+
+# end-technical-tangent
 
 # `for` loops can be nested
 for x in [1, 2, 3]:
