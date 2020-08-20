@@ -188,6 +188,46 @@ dict_with_tuples = {
 print(dict_with_tuples)
 
 
+# Recall from the Conditional Statements lesson that empty lists and dicts evaluate to False:
+empty_list = []
+if (empty_list):
+    print("This won't execute.")
+else:
+    print("Empty lists evaluate to False.")
+
+empty_dictionary = {}
+if (empty_dictionary):
+    print("This won't execute.")
+else:
+    print("Empty dictionaries evaluate to False.")
+
+# On the other hand, Non-empty lists and dicts evaluate to True
+nonempty_list = [99]
+if (nonempty_list):
+    print("Non-empty lists evaluate to True")
+else:
+    print("Empty lists evaluate to False.")
+
+nonempty_dictionary = {"id": "0099"}
+if (nonempty_dictionary):
+    print("Non-empty dictionaries evaluate to True")
+else:
+    print("Empty dictionaries evaluate to False.")
+
+# Don't get tripped up by the fact that we're checking if list/dict contains objects; not the objects themselves
+# Consider:
+nonempty_list = [0]
+if (nonempty_list):
+    print("Non-empty lists evaluate to True (even if the contents would evaluate to False)")
+else:
+    print("Empty lists evaluate to False.")
+
+nonempty_dictionary = {0: False}
+if (nonempty_dictionary):
+    print("Non-empty dictionaries evaluate to True (even if the contents would evaluate to False)")
+else:
+    print("Empty dictionaries evaluate to False.")
+
 # An important thing you will often need to do is check if an item is in a list
 # we use "if" and "in" to check this
 

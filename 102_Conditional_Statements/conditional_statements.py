@@ -78,14 +78,49 @@ if True:
 if False:
     print("This will never happen.")
 
-# Because it is very useful, you can also plug some other things into an if statement
-# and it will behave in a mostly-sensible way:
+# Nearly all values will evaluate to True, but it's worth knowing 
+# which values evaluate to False. Generally speaking, the values that evluate to False
+# are sensible and useful:
+
+# 0 is considered False
 x = 0
-if (x):
+if (x): # False
     print("This won't execute")
 else:
     print("0 evaluates to False")
 
+# Empty strings are considered False
+x = ""
+if (x): # False
+    print("This won't execute.")
+else:
+     print("Empty strings evaluate to False")
+
+# The `None` value is considered false
+x = None
+if (x):
+    print("This won't execute.")
+else:
+     print("None evaluates to False (but is not equal to False)")
+
+
+# We haven't properly introduced `lists` or `dictionaries` yet,
+# but, empty lists and empty dictionaries will both evaluate as False
+empty_list = []
+if (empty_list):
+    print("This won't execute.")
+else:
+    print("Empty lists evaluate to False.")
+
+empty_dictionary = {}
+if (empty_dictionary):
+    print("This won't execute.")
+else:
+    print("Empty dictionaries evaluate to False.")
+
+
+# Because it is very useful, you can also plug any other value into an if statement
+# and it will behave in a mostly-sensible way and evaluate to True:
 x = 1
 if (x):
     print("1 evaluates to True")
@@ -110,20 +145,8 @@ if (x):
 else:
     print("This won't execute.")
 
-x = ""
-if (x):
-    print("This won't execute.")
-else:
-     print("Empty strings evaluate to False")
-
 x = "False"
 if (x):
-    print("Non-empty strings evaluate to True (I tried to trick you)")
+    print("Non-empty strings evaluate to True (Did I trick you???)")
 else:
     print("This won't execute.")
-
-x = None
-if (x):
-    print("This won't execute.")
-else:
-     print("None evaluates to False (but is not equal to False)")
