@@ -48,6 +48,31 @@ for rank, flavor in enumerate(bagel_flavors):
     print(rank)
     print(flavor)
 
+# "List comprehension" provides a concise syntax for creating a list by iterating over an existing list
+# and applying some operation to each item
+
+# Consider the case where we want a list of all the squared integers from 0 to 4.
+
+# The "normal" way would be:
+squares = []
+for x in range(4):
+    squares.append(x**2)
+print(squares) # [0, 1, 4, 9]
+
+# Here's how that would work using list comprehension syntax:
+squares = [ x**2 for x in range(4) ]
+print(squares) # [0, 1, 4, 9]
+
+# A list comprehension consists of brackets containing an expression followed by a for clause, 
+# then zero or more `for` or `if` clauses. The result will be a new list resulting from 
+# evaluating the expression in the context of the `for` and `if` clauses which follow it.
+
+# Here's another example, this one uses the `if` clause
+
+numbers = [ 1, 33, 100, 2, 5, 3, 2, 7, 88, 19, 14, 81, 16, 16, 17, 17, 10011 ]
+# just odd numbers
+odds = [ x for x in numbers if x % 2 == 1]
+print(odds) # [1, 33, 5, 3, 7, 19, 81, 17, 17, 10011]
 
 # What happens if we iterate over a dict?
 
