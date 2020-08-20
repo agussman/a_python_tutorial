@@ -1,7 +1,9 @@
 # a_python_tutorial
 Introduction to Python
 
-The purpose of this tutorial is to teach you the basics of scripting in Python. It is aims to be example driven.
+The purpose of this tutorial is be an example-drive introduction to scripting in Python.
+
+It's meant to be a crash course, to expose you to the things that are most useful and to explain them in such a way that someone new to programming (or rusty) would get the basic idea. 
 
 It is not designed to teach you to be a software developer, to instill good software development practices, or to educate you on the fundamentals of computer science.
 
