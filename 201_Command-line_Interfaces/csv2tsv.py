@@ -1,5 +1,4 @@
 #!/usr/bin/env python3 
-# -*- coding: utf-8 -*- 
 
 '''convert csv input (hardcoded file) to tab-delimited text (stdout)'''
 
