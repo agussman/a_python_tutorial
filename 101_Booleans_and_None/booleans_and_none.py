@@ -55,6 +55,9 @@ print( (a < b) or (b < c) ) # True
 print( (a < b) or (c < a) ) # True
 print( (b < a) or (c < a) ) # False
 
+# You can also do this, although I personally don't find it particularly intuitive
+print ( a < b < c ) # True
+
 # Are these valid lengths for the sides of a triangle?
 print(  (a + b > c) and (a + c > b) and (b + c > a) ) # True
 
