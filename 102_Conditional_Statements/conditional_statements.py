@@ -71,6 +71,13 @@ elif (x == 1):
 elif (x > 1):
     print("x is too big.")
 
+# Conditional statements accept values as well as expressions:
+if True:
+    print("This will always happen.")
+
+if False:
+    print("This will never happen.")
+
 # Because it is very useful, you can also plug some other things into an if statement
 # and it will behave in a mostly-sensible way:
 x = 0
