@@ -34,4 +34,5 @@ You can use [Binder](https://mybinder.org/) to view/edit the code and execute it
 
  ## Python 3 Champions
 
-  * None yet! (Correct a Python 2-ism to be added)
+  * [arusahni](https://github.com/arusahni) for additional Boolean examples and corrections on encoding declarations 
+  * Correct a Python 2-ism or provide a contribution to be added!
