@@ -53,6 +53,15 @@ Another common shebang you might see is:
 
 Although the one called `env` to find the python interpreter is the "correct" approach
 
+## encoding declaration
+
+The second line of the file is also a special type of comment called an "encoding declaration":
+```
+# -*- coding: utf-8 -*-
+```
+
+This tells Python what encoding to use to read the source code. Python assumes `utf-8` by default, so I'm having a hard time conceiving of a case where this would matter. Some editors might take advantage of it?
+
 ## main()
 
 Typically at the bottom of python programs/scripts (e.g., a file that is meant to be executed or run), you will see:
