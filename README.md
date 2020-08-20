@@ -34,5 +34,6 @@ You can use [Binder](https://mybinder.org/) to view/edit the code and execute it
 
  ## Python 3 Champions
 
-  * [arusahni](https://github.com/arusahni) for additional Boolean examples and corrections on encoding declarations 
+  * [arusahni](https://github.com/arusahni) for additional Boolean examples and corrections on encoding declarations
+  * [calebmoss](https://github.com/calebmoss) for better True/False examples and additional content around lists and dicts
   * Correct a Python 2-ism or provide a contribution to be added!
