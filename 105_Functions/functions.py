@@ -196,6 +196,8 @@ modify_a_dict(my_dict)
 print(my_dict) # {'one': 1, 'two': 2, 'new': 99}
 
 # Python 3.5 introduced "type hints"
+# Type hints are used to denote the expected types of inputs and outputs to a function. They are useful to prevent you from shooting yourself in the foot
+# by accidentally sending the wrong type into a function (e.g., passing in a string instead of an int).
 # While they're optional and not super common, they look pretty wild I wanted to introduce them so you're not thrown if 
 # you encounter one in the wild
 
@@ -213,6 +215,9 @@ def typehint_function(score: int, name: str) -> bool:
         return True
     else:
         return False
+
+# If you start your python journey by including type hints in all your functions, A+ Gold Star to you!
+
 
 # Function annotations are added in the form `param_name : type` after each parameter in your function signature 
 # and a return type is specified using the `-> type` notation before the ending function colon
