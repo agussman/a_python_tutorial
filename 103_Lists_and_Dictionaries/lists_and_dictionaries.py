@@ -15,6 +15,9 @@ print(fruits[1]) # banana
 # Negative indexes start from the back of the list
 print(fruits[-1]) # emblic
 
+# If you try to access an index that doesn't exist, you'll get an IndexError
+#print(fruits[999]) # IndexError: list index out of range
+
 # use len() to get then length of a list
 print(len(fruits)) # 5
 
@@ -104,6 +107,22 @@ print(fruit_colors) # {'apple': 'red', 'banana': 'yellow', 'cherry': 'red', 'dur
 # This is also the same syntax for updating the value of an existing key
 fruit_colors["banana"] = "brown"
 print(fruit_colors) # {'apple': 'red', 'banana': 'brown', 'cherry': 'red', 'durian': 'spikey?', 'emblic': 'green', 'fig': 'purple'}
+
+# If you try to access a key that doesn't exist in a dictionary, you get a KeyError
+#print( fruit_colors["watermelon"] ) # KeyError: 'watermelon'
+
+# You can combine two dictionaries using `.update()`:
+dict1 = {"a": "Alpha", "b": "Bravo"}
+dict2 = {"c": "Charlie", "d": "Delta"}
+dict1.update(dict2)
+print(dict1) # {'a': 'Alpha', 'b': 'Bravo', 'c': 'Charlie', 'd': 'Delta'}
+# Note that only dict1 has been modified
+print(dict2) 
+
+# If the second dict has keys that overlap with the original, the value will be updated from the new dict
+dict3 = {"d": "Django", "e": "Echo"}
+dict1.update(dict3)
+print(dict1) # 'a': 'Alpha', 'b': 'Bravo', 'c': 'Charlie', 'd': 'Django', 'e': 'Echo'}
 
 
 # TODO: Rules of thumb for when to use a list vs a dictionary
