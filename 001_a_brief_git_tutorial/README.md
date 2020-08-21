@@ -1,3 +1,15 @@
+# The Basics
+
+To understand git, you just need to know:
+
+ * There are infinite simultanously realities and you can travel between them;
+ * You can travel through time;
+ * You cannot change the past while time travelling;
+ * You can create new realities from any point in time;
+ * You can merge two realities, but sometimes it takes a bit of work
+
+Pretty straight forward, right?
+
 # Why Version Control?
 
 Version control software serves three important and related functions.
@@ -9,7 +21,6 @@ Version control software serves three important and related functions.
 3) It allows different humans to work on the same pieces of code simultanously while minimizing the likelihood that they will murder each other.
 
 You could only ever use git on your local machine and it would fulfill 1) just fine. If you use a cloud-hosted third party service like gitlab.com, github.com, bitbucket.com, etc, you get the benefits of 2). Most of them will also give you the benefits of 3), but will ask you for $ above some threshold of use.
-
 
 # Why git?
 
