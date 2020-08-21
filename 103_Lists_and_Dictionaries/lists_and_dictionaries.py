@@ -125,7 +125,34 @@ dict1.update(dict3)
 print(dict1) # 'a': 'Alpha', 'b': 'Bravo', 'c': 'Charlie', 'd': 'Django', 'e': 'Echo'}
 
 
-# TODO: Rules of thumb for when to use a list vs a dictionary
+# What are some rules of thumb on when to use lists vs dictionaries?
+
+# If your elements could be repeated and order matters, you generally want a list
+# Examples
+# * Measurements of items coming off a conveyor belt
+measurements = [4.5, 4.4, 4.5, 5.5, 4.6, 4.4]
+
+# Use a dictionary when there's a unique identifier for each element
+orders = {
+    "100211": 2.33,
+    "100212": 5.99,
+    "100213": 101.23
+}
+
+# In practice you just need to develop a familiarity with it and often they're used together
+students = [
+    { 
+        "id": "10010",
+        "name": "Diego",
+        "grade": 65
+    },
+    {
+        "id": "10011",
+        "name": "Alice",
+        "grade": 95
+    }
+]
+
 
 # The items in a list can be other lists or dictionaries:
 
