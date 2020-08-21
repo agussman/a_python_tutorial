@@ -31,12 +31,8 @@ Jupyter notebooks are fairly synonmous with three packages:
 
 If you're launching the notebook from Binder it will automatically install the contents of `requirements.txt`. Those packages will also be available by default in Colab.
 
+Jupyter notebooks typically have the file extension `.ipynb`. Go ahead and view the included notebook(s) in Jupyter
 
-Look at the content of the script using your editor.
+ * `sample_visualizations.ipynb` - basic data ingest and visualization
 
-Then run the script to see the output.
-```bash
-$ python modules.py
-```
-
-Then look at the content of script again to make sure you understand what it did.
+If you look at the file directly, you'll see that it's not really human-readable. It's still a good idea to keep your notebooks versioned with git, but keep in mind that a) understanding changes (e.g., "diffs") won't really work without special tools and b) they can grow to be large in size.
