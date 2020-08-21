@@ -29,6 +29,8 @@ You can use [Binder](https://mybinder.org/) to view/edit the code and execute it
   * [eugeneh101 / Advanced-Python](https://github.com/eugeneh101/Advanced-Python/) a good tutorial on more advanced Python
   * [Primer on Function Dectorators in Python](https://realpython.com/primer-on-python-decorators/)
   * [Scope in Python and LEGB](https://realpython.com/python-scope-legb-rule/)
+   * [Simple Data Visualisation with Python and Pandas](https://towardsdatascience.com/simple-data-visualisation-with-pandas-7a7a035bdc39)
+   * [Pandas Visualization](https://pandas.pydata.org/pandas-docs/stable/user_guide/visualization.html)   
 
  # Acknowledgements
 
