@@ -60,3 +60,56 @@ The two trivial ways are:
      * Be a hero: Go through and sort out all the individual changes and tell git which ones to keep from each reality, or possibly sort of mash them together into a combined reality. Once you di this and give it a thumbs up, git is able to proceed from there. Most IDEs have tooling to help you do this so it's not completely backbreaking.
 
 
+# git commands
+
+## Create or getting a git remository
+
+Create a new local repository:
+```
+git init
+```
+
+or
+
+Check out a remote repository:
+```
+git clone <connection string to remote repo>
+```
+
+## Saving your changes
+
+Capture the alternate relating you've been working on in your Working Tree with:
+
+```
+git add <filepath>
+```
+
+`filepath` can be one or more individual files, a directory, a new file, etc
+
+Travel forward in time for your current reality and create a commit:
+```
+git commit -m "Useful message explaining what I've done"
+```
+
+# Sharing your changes with everyone else
+
+First, update your local copy of the Remote Repository
+```
+git fetch <optional branch name>
+```
+
+Merge the latest version of The Truth into your version of reality
+```
+git merge <branch name>
+```
+
+The above two steps can be combined into the single command:
+```
+git pull
+```
+
+Share your changes back with the rest of the world:
+```
+git push
+```
+
