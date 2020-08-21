@@ -21,3 +21,8 @@ with open(input_csv, 'r') as csvfile:
     csvreader = csv.reader(csvfile)
     for row in csvreader:
         print(row[8])
+
+
+# requests
+# https://requests.readthedocs.io/en/master/
+# This is not a built-in module, you'll need to install it
