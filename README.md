@@ -17,7 +17,7 @@ You can use [Binder](https://mybinder.org/) to view/edit the code and execute it
 
 # Instructions
 
- Each directory is a lesson. They will build upon each other conceptually but still run independently. 
+ Each directory is a lesson. They build upon each other conceptually but still run independently. 
 
  # References
 
