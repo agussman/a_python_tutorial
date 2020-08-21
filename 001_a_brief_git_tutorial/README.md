@@ -29,6 +29,23 @@ It's useful to think of git storing your files in three places. This is sort of 
 
 At any point while working in the Working Tree you have the option of creating a snapshot of your work. This is called a "commit". When you create a commit you tell git which files to snapshot and include a short message (called a "commit message") explaining what's up. Git saves these files back into the Local Repository in a non-destructive way; git is able to simultaneously know the last version of The Truth that it synced from the Remote Repository and the Reality As Modified By You.
 
-Because git is tracking all these things simultaneously, it can tell you what's changed (aka "What did I break?"). The most common change you'll ask git is, "What changed between the current state of the Working Tree and my last commit to the Remote Repository?". Git will then show you all the additions and subtractions to the files you've edited since the last commit. 
+Because git is tracking all these things simultaneously, it can tell you what's changed (aka "What did I break?"). The most common change you'll ask git is, "What changed between the current state of the Working Tree and my last commit to the Remote Repository?". Git will then show you all the additions and subtractions to the files you've edited since the last commit. You can also ask git to show you all the changes between your last commit (aka "Reality As Modified By You") and your local copy of the Remote Repository (aka "The Truth").
+
+At some point, you would may decide that Reality As Modified By You isn't that bad (you finally got that new feature to work and you can stop muttering to yourself) and you want to share it with the rest of the world/your team. In order to do that, you must reconcile ("merge") RAMBY with The Truth.
+
+There are three ways Reality As Modified By You and The Truth can be out of sync. Two of them are fairly trivial, but one of them requires some work.
+
+The two trivial ways are:
+
+ * The Remote Repository has been updated but you didn't make any changes locally. This is pretty straight forward, it happens all the time. You just update your local version of the remote repository. It also means that, since you didn't change anything locally, you don't have anything you need to share back.
+
+ * You updated your local repository, but there haven't been any intervening changes to the remote repository. Good news, you win! Your version of reality can easily become the new, shared version of reality, you just need to send it back to the remote server.
+
+ * You changed your local repository AND the remote repository was updated. Uh oh! Now two realities are fighting for supremacy! There are two ways this can go down
+
+   * No big deal: your realities were different in different ways (e.g., neither of you changed the same files, or similar parts of the same file ) and git just figures it out for you by combining all the changes (none of which overlap)
+   * King of a big deal: you both touched the same parts of the same files. git kind of just throws up its hands and says "You're on your own!". This is called a "merge conflict". Now you have to fix it on your own. You've got two options:
+     * Be a coward: If your change was small, just abandon the changes you were trying to make, switch over the latest version of the code from the remote repository, and re-implement what you were trying to do. Honestly, I do this a lot more than I'm proud to say.
+     * Be a hero: Go through and sort out all the individual changes and tell git which ones to keep from each reality, or possibly sort of mash them together into a combined reality. Once you di this and give it a thumbs up, git is able to proceed from there. Most IDEs have tooling to help you do this so it's not completely backbreaking.
 
 
